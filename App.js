@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Categories from "./src/pages/Categories";
+import Meals from "./src/pages/Meals";
+import MealDetail from "./src/pages/MealDetail";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () => (
+  <NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        headerTitleAlign: "center",
+        headerTitleStyle: { color: "#fea501" },
+        headerTintColor: "#fea501",
+      }}
+    >
+      <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen name="Meals" component={Meals} />
+      <Stack.Screen name="Detail" component={MealDetail} />
+    </Stack.Navigator>
+  </NavigationContainer>
+);
+
+export default App;
