@@ -11,9 +11,10 @@ export default StyleSheet.create({
     paddingBottom: 20,
   },
   meal_area: {
+    backgroundColor: "#fff",
     borderBottomColor: "#000",
     borderBottomWidth: 2,
-    paddingBottom: 5,
+    padding: 5,
   },
   meal: {
     fontSize: 26,
@@ -22,7 +23,19 @@ export default StyleSheet.create({
   meal_from: {
     fontSize: 22,
     color: "#a83232",
-    opacity: 0.8,
+    opacity: 0.85,
+  },
+  tag_area: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingBottom: 7,
+    marginLeft: -10,
+  },
+  material: {
+    color: "#fff",
+    fontStyle: "italic",
+    marginTop: 3,
   },
   recipe: {
     marginTop: 10,
